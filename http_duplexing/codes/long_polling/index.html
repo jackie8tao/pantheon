@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Long Polling</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    (function post() {
+        $.post("http://127.0.0.1:1335/msg", function (data) {
+            console.log(data);
+            post();
+        });
+    })();
+</script>
+</body>
+</html>
