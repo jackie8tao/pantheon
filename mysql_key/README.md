@@ -23,13 +23,13 @@ This was implemented for compatibility with other database systems.
     ) engine InnoDB character set utf8mb4 collate utf8mb4_general_ci comment '用户信息表';
     ```
 
-    执行结果如下：
+    执行结果如下：  
     ![users_ok](images/users_ok.png)
 
-    查看索引：
+    查看索引：  
     ![users_index](images/users_index.png)
 
-    错误的情况：
+    错误的情况：  
     ![user_errors](images/user_errors.png)
 
     > 通过上面的sql，对比可以发现`key`和`primary key`的含义重复。都表示主键，所以sql的执行结果会报错。当使用`key`和 `unique`也正常的生成了索引。
@@ -51,10 +51,10 @@ This was implemented for compatibility with other database systems.
         collate utf8mb4_general_ci comment '帖子信息表';
     ```
 
-    执行结果如下：
+    执行结果如下：  
     ![posts_ok](images/posts_ok.png)
 
-    查看索引：
+    查看索引：  
     ![posts_index](images/posts_index.png)
 
     > 通过上面的sql，可以发现`constraint primary key`和`primary key`的作用是一样的。
@@ -76,10 +76,10 @@ This was implemented for compatibility with other database systems.
         collate utf8mb4_general_ci comment '网站配置表';
     ```
 
-    执行结果如下：
+    执行结果如下：  
     ![configs_ok](images/configs_ok.png)
 
-    查看索引：
+    查看索引：  
     ![configs_index](images/configs_index.png)
 
     > 通过对比上面的sql，可以发现`constraint unique key`和`unique key`的作用是一样的。
